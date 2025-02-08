@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <!-- Basic SEO Meta Tags -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="GoOut - Discover the best places to visit and explore exciting events near you.">
+     <meta name="keywords" content="events, nightlife, travel, explore, parties, best places">
+     <meta name="author" content="Saba">
+ 
+     <!-- Open Graph (OG) Tags for Social Media -->
+     <meta property="og:title" content="GoOut - Find the Best Places & Events">
+     <meta property="og:description" content="Discover events and places near you with GoOut. The best platform for nightlife and entertainment.">
+     <meta property="og:image" content="https://www.goout.com/preview.jpg">
+     <meta property="og:url" content="https://www.goout.com">
+     <meta property="og:type" content="website">
+ 
+     <!-- Twitter Card for Twitter Sharing -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="GoOut - Find the Best Places & Events">
+     <meta name="twitter:description" content="Discover events and places near you with GoOut.">
+     <meta name="twitter:image" content="https://www.goout.com/preview.jpg">
+ 
+     <!-- Canonical URL (Prevents Duplicate Content Issues) -->
+     <link rel="canonical" href="https://www.goout.com">
+ 
+     <!-- Favicon -->
+     <link rel="icon" href="favicon.ico" type="image/x-icon">
+ 
+     <title>GoOut - Find the Best Places & Events</title>
+ 
+     <!-- Structured Data (Schema.org for SEO) -->
+     <script type="application/ld+json">
+     
+     </script>
+ 
     <title>GoOut tbilisi</title>  
-    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="style.css">   
     
 </head>
 <body>  
@@ -12,31 +45,31 @@
         <div class="logo">
             <h1>GoOut</h1>
         </div>
-        <nav>
+        <nav id="nav">
             <ul>
-                <li><a href="index.html">მთავარი</a></li>
-                <li><a href="about.html">ჩვენს შესახებ</a></li>
-                <li><a href="contact.html">კონტაქტი</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="/about.html">about</a></li>
+                <li><a href="#">მოლები</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
             </ul>
         </nav>
+        <div class="burger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
     </header>
     
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="./goOut.png" alt="Slide 1"></div>
+            <div class="slide"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/c3/2a/5b/every-day-arteria-presents.jpg?w=900&h=-1&s=1" alt="Slide 2"></div>
+            <div class="slide"><img src="https://georgia.to/media/thumbnails/RKnuesobhvPDUZ7wwR8A32_smedium.jpeg" alt="Slide 3"></div>
+        </div>
+    </div>
   
-    <form action="https://formspree.io/f/mwkajkyk" method="POST">
-        <div class="form-group">
-            <label for="name">სრული სახელი</label>
-            <input type="text" id="name" name="name" placeholder="შეიყვანეთ თქვენი სრული სახელი" required>
-        </div>
-        <div class="form-group">
-            <label for="email">ელ. ფოსტა</label>
-            <input type="email" id="email" name="email" placeholder="შეიყვანეთ თქვენი ელ. ფოსტა" required>
-        </div>
-        <div class="form-group">
-            <label for="message">შეტყობინება</label>
-            <textarea id="message" name="message" rows="5" placeholder="გთხოვთ, აღწეროთ თქვენი შეკითხვა ან მოთხოვნა" required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">გაგზავნა</button>
-    </form>
+  
 
     <div class="container">
         <a href="./second.html" class="choice" id="entertainment">
@@ -52,88 +85,93 @@
             <span>მუზეუმები <br> Museums</span>
         </a>
     </div> 
+
+
+
     <div class="new-container">
-        <div class="new-choice" id="place1">
-            <div class="new-image" style="background-image: url('./a5c3a4dc2366a3778f6b84dd8c449506.jpg');"></div>
+        <a href="./bar1.html" class="new-choice" id="place1" target="_blank">
+            <div class="new-image" style="background-image: url('https://georgia.to/media/thumbnails/RKnuesobhvPDUZ7wwR8A32_smedium.jpeg');"></div>
             <div class="new-text">
-                <h3>სახელი 1</h3>
-                <p>ადგილმდებარეობა 1</p>
+                <h3 class="c">Fabrika-ფაბრიკა</h3>
             </div>
-        </div>
-        <div class="new-choice" id="place2">
-            <div class="new-image" style="background-image: url('./428340550_418829230705981_1004918181155514252_n.jpg');"></div>
+        </a>
+        
+        <a href="page2.html" class="new-choice" id="place2">
+            <div class="new-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWxPf6-a-2vV3_YHK5QT-0EjstO9m-zS0s_g&s');"></div>
             <div class="new-text">
-                <h3>Ratis bar</h3>
-                <p></p>
-            </div>
-        </div>
-        <div  class="new-choice" id="place3">
-            <div class="new-image" style="background-image: url('image3.jpg');" ></div>
-            <div class="new-text"> 
+                <h3 class="c">Ratis bar</h3>
                 
-                <h3>სახელი 3</h3>
-                <p>ადგილმდებარეობა 3</p>
             </div>
-        </div>
-        <div class="new-choice" id="place4">
-            <div class="new-image" style="background-image: url('image4.jpg');"></div>
+        </a>
+    
+        <a href="./bar5.html" class="new-choice" id="place3">
+            <div class="new-image" style="background-image: url('https://s.inyourpocket.com/gallery/144704.jpg');"></div>
             <div class="new-text">
-                <h3>სახელი 4</h3>
-                <p>ადგილმდებარეობა 4</p>
+                <h3 class="c">Littera-ლიტერა</h3>
+               
             </div>
-        </div>
-        <div class="new-choice" id="place5">
+        </a>
+    
+        <a href="page4.html" class="new-choice" id="place4">
+            <div class="new-image" style="background-image: url('');"></div>
+            <div class="new-text">
+                <h3 class="c">სახელი 4</h3>
+                
+            </div>
+        </a>
+    
+        <a href="page5.html" class="new-choice" id="place5">
             <div class="new-image" style="background-image: url('image5.jpg');"></div>
             <div class="new-text">
-                <h3>სახელი 5</h3>
-                <p>ადგილმდებარეობა 5</p>
+                <h3 class="c">სახელი 5</h3>
+                
             </div>
-        </div>
-        <div class="new-choice" id="place6">
+        </a>
+    
+        <a href="page6.html" class="new-choice" id="place6">
             <div class="new-image" style="background-image: url('image6.jpg');"></div>
             <div class="new-text">
-                <h3>სახელი 6</h3>
-                <p>ადგილმდებარეობა 6</p>
+                <h3 class="c">სახელი 6</h3>
+                
             </div>
-        </div>
+        </a>
     </div>
-
-<section class="hero">
-        <h1>აღმოაჩინე საუკეთესო ადგილები!</h1>
-        <p>გაატარე დაუვიწყარი დრო და იპოვე საუკეთესო ადგილები.</p>
-        <a href="about.html" class="btn">გაიგე მეტი</a>
-    </section>
-
+ 
     <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>GoOut</h3>
-                <p>აღმოაჩინე საუკეთესო ადგილები და გაატარე დაუვიწყარი დრო!</p>
-            </div>
-            <div class="footer-section">
-                <h3>კატეგორიები</h3>
-                <ul>
-                    <li><a href="#">გართობა</a></li>
-                    <li><a href="#">კაფე-ბარები</a></li>
-                    <li><a href="#">მოლები</a></li>
-                    <li><a href="#">ღირშესანიშნაობები</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>კონტაქტი</h3>
-                <p>Email: contact@goout.com</p>
-                <p>ტელ: +995 599 123 456</p>
-            </div> 
-            <div class="footer-right">
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            </div>
+        <div class="footer-content">
+          <div class="footer-left">
+            <h3>GoOut</h3>
+            <p>Your go-to platform for events, entertainment, and more.</p>
+          </div>
+          <div class="footer-middle">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <h4>Contact Us</h4>
+            <ul>
+              <li><a href="mailto:contact@goout.com">gooutout4@gmail.com</a></li>
+              <li><a href="tel:+1234567890">+995 599 17 36 85</a></li>
+              <li>Follow us on social media:</li>
+              <ul class="social-icons">
+                <li><a href="#" class="social-icon">FB</a></li>
+                <li><a href="#" class="social-icon">TT</a></li>
+                
+              </ul>
+            </ul>
+          </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 GoOut | ყველა უფლება დაცულია</p>
+          <p>&copy; 2025 GoOut. All rights reserved. Designed by Your Name</p>
         </div>
-    </footer>
-    <script src="app.js"></script>   
+      </footer>
+       
+
+     <script src="app.js"></script>
 </body>
 </html>

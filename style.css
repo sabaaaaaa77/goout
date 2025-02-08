@@ -5,7 +5,7 @@
 } 
 
 
-body { 
+body {  
     height: 100%;
     font-family: Arial, sans-serif;
     display: flex;
@@ -13,23 +13,29 @@ body {
     justify-content: flex-start;
     min-height: 100vh;
     padding-top: 120px; /* სივრცე ჰედერიდან */
-    padding-bottom: 50px; /* უფრო მეტი სივრცე ფუთერამდე */ 
+    padding-bottom: 100px; /* უფრო მეტი სივრცე ფუთერამდე */ 
     justify-content: space-between; /* ცენტრში მართავს და აწყობს დივებს */
     min-height: 100vh; /* მინიმუმ ერთი სქროლიანი ეკრანის ზომა */
     padding-top: 120px; /* ჰედერის ზემოთ სივრცე */
     padding-bottom: 50px; /* დამატებითი სივრცე ფუთერისთვის */ 
-    background:  url('https://storage.georgia.travel/images/tbilisi-nightlife(2).webp');
+    /* background:  url('https://c4.wallpaperflare.com/wallpaper/911/612/984/pink-cloud-blur-gradation-wallpaper-preview.jpg'); */
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment: fixed;  
+  background-color: #333;
 } 
 @keyframes gradient-animation {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-  }
+  } 
 
-header {
+
+
+  
+
+header { 
+    background-color: #ddd;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,7 +81,7 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background:black;
+    background-color: #ddd;
     color: white;
 }
 
@@ -99,149 +105,218 @@ nav ul li a:hover {
     margin: 0 auto;
     max-width: 1200px;
 }
-
-header {
-    background-color: #222;
-    padding: 20px 0;
-}
-
-header .logo h1 {
-    color: #fff;
-    font-size: 36px;
-}
-
-header nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-}
-
-header nav ul li {
-    margin-left: 30px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.about-section {
-    display: flex;
-    justify-content: space-between;
-    padding: 80px 0;
-    background-color: #fff;
-}
-
-.about-content h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.about-content p {
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 600px;
-}
-
-.about-image img {
-    max-width: 500px;
-    border-radius: 10px;
-}
-
-footer {
-    background-color: #222;
-    color: #fff;
-    padding: 20px 0;
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background-color: #111;
+    border-bottom: 3px solid purple;
 }
 
-footer .footer-left p {
-    font-size: 14px;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
 }
 
-footer .footer-right {
+.nav ul {
+    list-style: none;
     display: flex;
+    gap: 20px;
 }
 
-footer .footer-right .social-icon {
-    color: #fff;
-    font-size: 20px;
-    margin-left: 15px;
+.nav a {
     text-decoration: none;
-}
-
-footer .footer-right .social-icon:hover {
-    color: #ff7b00;
-} 
-.contact-section {
-    padding: 80px 0;
-    background-color: #fff;
-    text-align: center;
-}
-
-.contact-section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.contact-section p {
+    color: white;
     font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 40px;
+    transition: color 0.3s;
 }
 
-.contact-form {
-    display: block;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
+.nav a:hover {
+    color:pink;
 }
 
-.contact-form .form-group {
-    margin-bottom: 20px;
-}
-
-.contact-form label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.contact-form button {
-    padding: 12px 20px;
-    font-size: 18px;
-    background-color: #ff7b00;
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
     border: none;
-    color: #fff;
-    border-radius: 5px;
+    color: white;
     cursor: pointer;
 }
 
-.contact-form button:hover {
-    background-color: #e66300;
+@media (max-width: 768px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: #111;
+        width: 100%;
+        left: 0;
+        top: 60px;
+        padding: 20px;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+} 
+
+/* slider */ 
+
+.slider {
+    position: relative;
+    width: 80vw;
+    height: 50vh;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
 }
 
+/* Footer style */
 footer {
-    background-color: #222;
+    background-color: #1a1a1a;
     color: #fff;
-    padding: 20px 0;
+    padding: 60px 0 20px;
+    text-align: left;
+    width: 100%;
+    position: relative; /* Keeps the footer within the page flow */
+    bottom: 0;
+  }
+  
+  .footer-content {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-left, .footer-middle, .footer-right {
+    flex: 1;
+    margin-right: 40px;
+  }
+  
+  .footer-left h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #1abc9c;
+  }
+  
+  .footer-left p {
+    font-size: 14px;
+    color: #b0b0b0;
+  }
+  
+  .footer-middle h4,
+  .footer-right h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-middle ul,
+  .footer-right ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-middle ul li,
+  .footer-right ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-middle ul li a,
+  .footer-right ul li a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-middle ul li a:hover,
+  .footer-right ul li a:hover {
+    color: #1abc9c;
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .social-icons .social-icon {
+    background-color: #34495e;
+    padding: 12px;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-}
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons .social-icon:hover {
+    background-color: #1abc9c;
+    transform: scale(1.1);
+  }
+  
+  .footer-bottom {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  .footer-bottom p {
+    color: #b0b0b0;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+      margin-right: 0;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .footer-bottom p {
+      font-size: 14px;
+    }
+  }
 
 /* Burger Menu */
 .burger {
@@ -334,7 +409,8 @@ header.scrolled {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px; 
+    padding: 20px;
 }
 
 .choice {
@@ -386,119 +462,190 @@ header.scrolled {
     z-index: 1; /* ტექსტი უნდა იყოს ზედ სურათზე */
 } 
 /* ფუთერიუ */  
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px 10%;
-    margin-top: auto; /* ფუთერი ბოლოში მიიწევს */
-    max-width: 100%; 
-    background: #222;
-    color: white;
-    text-align: center;
-   background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px; 
-    height: 450px;
-    
-    
-}
 
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px 0;
-}
 
-.footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin-bottom: 20px;
-}
 
-.footer-section h3 {
-    color: #f9a825;
-    margin-bottom: 10px;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin: 5px 0;
-}
-
-.footer-section ul li a {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.footer-section ul li a:hover {
-    color: #f9a825;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 10px;
-    border-top: 1px solid #444;
-    margin-top: 20px;
-} 
 /* დივები */ 
 .new-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 20px;
-    padding: 20px;
-    flex-grow: 1; /* უზრუნველყოფს, რომ კონტენტი არ გადაფაროს */
-}
-
-.new-choice {
-    position: relative;
-    background: #f0f0f0;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
-    flex-direction: row;
-    height: 250px;
-    transition: transform 0.3s ease;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
 }
 
+/* Individual Choice */
+.new-choice {
+    display: block;
+    width: calc(33.33% - 20px); /* Ensures 3 items in one row with 20px gap */
+    text-decoration: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+/* Hover effect for scaling */
 .new-choice:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* Image Styling */
 .new-image {
-    width: 70%;
-    height: 100%;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Hover effect on image */
+.new-choice:hover .new-image {
+    transform: scale(1.1);
+}
+
+/* Text Styling */
+.new-text {
+    padding: 15px;
+    background: #fff;
+    text-align: center;
+    transition: background-color 0.4s ease;
+}
+
+.c {
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Hover effect on text */
+.new-choice:hover .new-text {
+    background-color: #f0f0f0;
+}
+
+/* Stylish border animation */
+.new-choice::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Border animation on hover */
+.new-choice:hover::before {
+  
+    background-position: 100% 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .new-choice {
+        width: 100%;  /* Takes full width on smaller screens */
+        height: auto;
+    }
+    .new-image {
+        height: 180px;  /* Slightly smaller on mobile */
+    }
+}
+
+.extra-section {
+    padding: 50px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.extra-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; 
+    padding: 100px; 
+    margin: 10px;
+}
+
+.extra-item {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.extra-image {
+    height: 200px;
     background-size: cover;
     background-position: center;
 }
 
-.new-text {
+.extra-text {
     padding: 20px;
+}
+
+/* სლაიდერის კონტეინერი */
+.slider-container {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* სლაიდების კონტეინერი */
+.slider-items {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 300%; /* სამი სლაიდის მასშტაბით */
+    transition: transform 0.5s ease;
 }
 
-.new-text h3 {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 10px;
+/* თითოეული სლაიდი */
+.slider-item {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-.new-text p {
-    font-size: 1em;
-    color: #555;
+/* ტექსტი სლაიდზე */
+.slider-text {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 10px;
 }
 
+/* ანიმაცია სლაიდებისთვის */
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* დამატებითი სლაიდების გადაცემა */
+.slider-container:hover .slider-items {
+    animation: slide 12s infinite;
+}
 /* მეორე გვერდიი */
 
 
@@ -563,7 +710,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 80%; 
  
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);

@@ -11,7 +11,7 @@ window.onscroll = function() {
 
 
 
-<?php
+
 function toggleHeaderSize() {
     const header = document.getElementById("header");
 
@@ -26,20 +26,31 @@ function toggleMenu() {
     const nav = document.getElementById('nav');
     nav.classList.toggle('active');
 } 
+function updateMetaTags(title, description, url, image) {
+    document.title = title;
+    
+    document.querySelector('meta[name="description"]').setAttribute("content", description);
+    document.querySelector('meta[property="og:title"]').setAttribute("content", title);
+    document.querySelector('meta[property="og:description"]').setAttribute("content", description);
+    document.querySelector('meta[property="og:url"]').setAttribute("content", url);
+    document.querySelector('meta[property="og:image"]').setAttribute("content", image);
+} 
+let index = 0;
+const slides = document.querySelector('.slides');
+const totalSlides = document.querySelectorAll('.slide').length;
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-
-    $to = "your-email@example.com"; // ჩაწერე შენი ელ. ფოსტა
-    $subject = "კონტაქტის ფორმა - goOUT";
-    $body = "მომხმარებელი: $name\n\nEmail: $email\n\nშეტყობინება:\n$message";
-
-    if (mail($to, $subject, $body)) {
-        echo "თქვენი შეტყობინება გაიგზავნა!";
-    } else {
-        echo "შეტყობინების გაგზავნა ვერ მოხერხდა.";
-    }
+function updateSlidePosition() {
+    slides.style.transition = 'transform 0.5s ease-in-out';
+    slides.style.transform = `translateX(-${index * 100}%)`;
 }
-?>
+
+function autoSlide() {
+    index = (index + 1) % totalSlides;
+    updateSlidePosition();
+}
+
+setInterval(autoSlide, 3000);
+
+
+
+
